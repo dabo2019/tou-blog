@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "6790e5d5-26db-495e-85de-6126bb28aca6"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -67,6 +68,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+          "host": "0.0.0.0",
+          "port": 4200,
+          "allowedHosts": ["localhost","127.0.0.1","0.0.0.0","[::1]","172.17.0.2"]
+        },
           "configurations": {
             "production": {
               "buildTarget": "tou-blog:build:production"
